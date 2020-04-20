@@ -4,3 +4,9 @@ C:\Users\mhein\Desktop\LemonadeStand_3DayStarter\bin\Debug\LemonadeStand_3DaySta
 C:\Users\mhein\Desktop\LemonadeStand_3DayStarter\obj\Debug\LemonadeStand_3DayStarter.csprojAssemblyReference.cache
 C:\Users\mhein\Desktop\LemonadeStand_3DayStarter\obj\Debug\LemonadeStand_3DayStarter.exe
 C:\Users\mhein\Desktop\LemonadeStand_3DayStarter\obj\Debug\LemonadeStand_3DayStarter.pdb
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\obj\Debug\LemonadeStand_3DayStarter.csprojAssemblyReference.cache
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\obj\Debug\LemonadeStand_3DayStarter.exe
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\obj\Debug\LemonadeStand_3DayStarter.pdb
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\bin\Debug\LemonadeStand_3DayStarter.exe.config
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\bin\Debug\LemonadeStand_3DayStarter.exe
+C:\Users\netra\Desktop\devCode\Week_03\Projects\LemonadeStand_StarterCode\Lemonade_Stand\bin\Debug\LemonadeStand_3DayStarter.pdb
