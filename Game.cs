@@ -19,9 +19,10 @@ namespace LemonadeStand_3DayStarter
          
         public void RunGame()
         {
+            //printing weather forecast for tomorrow and today 
             Weather todaysWeather = new Weather();
             todaysWeather.Forecast();
-            //printing weather forecast for tomorrow and today
+            
            
             
             //printing how many ingredients/ money we have

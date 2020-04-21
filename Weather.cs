@@ -42,17 +42,17 @@ namespace LemonadeStand_3DayStarter
             {
                 case "Sunny":
                     temperature = rnd.Next(60, 100);
-                    Console.WriteLine("Sunny and " + temperature + " degrees");
+                    //Console.WriteLine("Sunny and " + temperature + " degrees");
                     break;
 
                 case "Rainy":
                     temperature = rnd.Next(40, 65);
-                    Console.WriteLine("Rainy and " + temperature + " degrees");
+                   // Console.WriteLine("Rainy and " + temperature + " degrees");
                     break;
 
                 case "Cloudy":
                     temperature = rnd.Next(50, 95);
-                    Console.WriteLine("Cloudy and " + temperature + " degrees");
+                   // Console.WriteLine("Cloudy and " + temperature + " degrees");
                     break;
 
 
@@ -62,10 +62,9 @@ namespace LemonadeStand_3DayStarter
         {
             foreach (string day in daysOfWeek)
             {
-                Console.WriteLine("\nYour forecast for " + day + " is: ");
                 FindCondition();
                 FindTemp();
-
+                Console.WriteLine("\nYour forecast for " + day + " is: " + condition + " " + temperature);
 
             }
         }

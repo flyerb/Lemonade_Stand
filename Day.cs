@@ -24,6 +24,7 @@ namespace LemonadeStand_3DayStarter
             Customer dailyCustomers = new Customer(); // this will take you to the MakeChoice() How to connect make choice with the generated customers?
             //print the EOD
             //print running total for week
+            
 
 
 
