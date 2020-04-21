@@ -19,9 +19,9 @@ namespace LemonadeStand_3DayStarter
         public void RunGame()
         {
             Day test = new Day();
+            
             GoToTheStore(player);
-            // choose player
-            //cycle through days
+            
         }
 
 

@@ -25,7 +25,7 @@ namespace LemonadeStand_3DayStarter
         
         //methods
 
-        private void FindCondition()
+        public void FindCondition()
         {
             Random rnd = new Random();
             int index = rnd.Next(weatherConditions.Count);
@@ -33,7 +33,7 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine(weatherConditions[index]);
         }
         
-        private void FindTemp()
+        public void FindTemp()
         {
             Random rnd = new Random();
 

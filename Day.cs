@@ -14,12 +14,17 @@ namespace LemonadeStand_3DayStarter
         public List<Customer> customers;
         public List<string> daysOfWeek;
 
+
         //ctor 
         public Day()
         {
             customers = new List<Customer>();
             weather = new Weather();
             GenerateCustomers();
+            Customer dailyCustomers = new Customer(); // this will take you to the MakeChoice() How to connect make choice with the generated customers?
+            //print the EOD
+            //print running total for week
+
 
 
             daysOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };

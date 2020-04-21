@@ -6,32 +6,46 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Customer
+     class Customer
     {
         public string name;
         private List<string> names;
-
+        public Weather weather;
+        public Recipe recipe;
         //ctor
         public Customer()
         {
-
-            names = new List<string>() {};
+            MakeChoice(weather, recipe);
+            names = new List<string>() { };
         }
 
         //methods
-        //public bool MakeChoice(Recipe recipe, Weather weather)
-       // {
-            //if weather is nice
-            // gen number between 4 and 10
+        public bool MakeChoice(Weather weather, Recipe recipe) 
+        {
+            Random rnd = new Random();
 
-            //if weather is bad
-            // gen number betwen 0 and 10
+            if (weather.condition == "Sunny" || recipe.pricePerCup == 1)
+            {
+                int newInt = rnd.Next(4, 10);
+                if (newInt >= 5)
+                    return true;
 
-            // if gen number is greater than or eqaul to 5
-            //return true
-            //else
-            //return false
-        
+            }
+            else if (weather.condition == "Cloudy" || recipe.pricePerCup == 2)
+            {
+                int newInt = rnd.Next(3, 10);
+                if (newInt >= 5)
+                    return true;
+            }
+            else if (weather.condition == "Rainy" || recipe.pricePerCup ==3)
+            {
+                int newInt = rnd.Next(1, 10);
+                if (newInt >= 5)
+                    return true;
+            }
+                return false;
 
+
+        }
     }
 }
