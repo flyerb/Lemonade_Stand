@@ -13,14 +13,23 @@ namespace LemonadeStand_3DayStarter
         private int currentDay;
         private Store store;
         public Day day;
+        public Weather weather;
 
         //methods
          
         public void RunGame()
         {
+            Weather todaysWeather = new Weather();
+            todaysWeather.Forecast();
+            //printing weather forecast for tomorrow and today
+           
+            
+            //printing how many ingredients/ money we have
+            //asking if we want to go to the store
+            GoToTheStore(player);
             Day test = new Day();
             
-            GoToTheStore(player);
+            
             
         }
 

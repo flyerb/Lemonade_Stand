@@ -16,16 +16,16 @@ namespace LemonadeStand_3DayStarter
 
         //methods
 
-        public void CupPrice()
+        public void CupPrice() //dont use numbers- come back to this
         {
             Random rnd = new Random();
             int dailyPrice = rnd.Next(1, 5);
 
-            if(dailyPrice <= 2)
+            if (dailyPrice <= 2)
             {
                 pricePerCup = 1; //tried to use ToString 
             }
-            else if(dailyPrice == 3)
+            else if (dailyPrice == 3)
             {
                 pricePerCup = 2;
             }
@@ -33,6 +33,28 @@ namespace LemonadeStand_3DayStarter
             {
                 pricePerCup = 3;
             }
+
+        }
+
+        public void Makepitcher()
+        {
+            if (amountOfLemons > 4)
+            {
+                amountOfLemons -= 4;
+            }
+            else Console.WriteLine("We ran out of lemons!");
+
+            if (amountOfSugarCubes > 6)
+            {
+                amountOfSugarCubes -= 6;
+            }
+            else Console.WriteLine("We ran out of sugar!");
+
+            if (amountOfIceCubes > 3)
+            {
+                amountOfIceCubes -= 3;
+            }
+            else Console.WriteLine("We ran out of ice cubes");
 
         }
     }

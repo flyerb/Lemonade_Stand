@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Weather
+    public class Weather
     {
         //variables
         public string condition;
         public int temperature;
         private List<string> weatherConditions;
-        
+        List<string> daysOfWeek;
 
         //ctor
         public Weather()
@@ -20,9 +20,10 @@ namespace LemonadeStand_3DayStarter
             weatherConditions = new List<string>() { "Sunny", "Rainy", "Cloudy" };
             FindCondition();
             FindTemp();
+            daysOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
         }
-        
+
         //methods
 
         public void FindCondition()
@@ -30,9 +31,9 @@ namespace LemonadeStand_3DayStarter
             Random rnd = new Random();
             int index = rnd.Next(weatherConditions.Count);
             condition = weatherConditions[index];
-            Console.WriteLine(weatherConditions[index]);
+            // Console.WriteLine(weatherConditions[index]);
         }
-        
+
         public void FindTemp()
         {
             Random rnd = new Random();
@@ -41,18 +42,33 @@ namespace LemonadeStand_3DayStarter
             {
                 case "Sunny":
                     temperature = rnd.Next(60, 100);
+                    Console.WriteLine("Sunny and " + temperature + " degrees");
                     break;
+
                 case "Rainy":
                     temperature = rnd.Next(40, 65);
+                    Console.WriteLine("Rainy and " + temperature + " degrees");
                     break;
+
                 case "Cloudy":
                     temperature = rnd.Next(50, 95);
+                    Console.WriteLine("Cloudy and " + temperature + " degrees");
                     break;
- 
+
 
             }
         }
+        public void Forecast()
+        {
+            foreach (string day in daysOfWeek)
+            {
+                Console.WriteLine("\nYour forecast for " + day + " is: ");
+                FindCondition();
+                FindTemp();
 
+
+            }
+        }
     }
 }
 
