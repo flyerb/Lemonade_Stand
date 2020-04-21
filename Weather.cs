@@ -12,7 +12,7 @@ namespace LemonadeStand_3DayStarter
         public string condition;
         public int temperature;
         private List<string> weatherConditions;
-        List<string> daysOfWeek;
+        
 
         //ctor
         public Weather()
@@ -20,7 +20,6 @@ namespace LemonadeStand_3DayStarter
             weatherConditions = new List<string>() { "Sunny", "Rainy", "Cloudy" };
             FindCondition();
             FindTemp();
-            daysOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
         }
 
@@ -43,7 +42,7 @@ namespace LemonadeStand_3DayStarter
                 case "Sunny":
                     temperature = rnd.Next(60, 100);
                     //Console.WriteLine("Sunny and " + temperature + " degrees");
-                    break;
+                    break; 
 
                 case "Rainy":
                     temperature = rnd.Next(40, 65);
@@ -58,21 +57,9 @@ namespace LemonadeStand_3DayStarter
 
             }
         }
-        public void Forecast()
-        {
-            foreach (string day in daysOfWeek)
-            {
-                FindCondition();
-                FindTemp();
-                Console.WriteLine("\nYour forecast for " + day + " is: " + condition + " " + temperature);
-
-            }
-        }
+       
     }
 }
-
-            
-
         //give a forecast and the actual day
         //loop through the days of of the week and assign a type of weather to each day.
         //

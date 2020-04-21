@@ -15,29 +15,29 @@ namespace LemonadeStand_3DayStarter
         //ctor
         public Customer()
         {
-            MakeChoice(weather, recipe);
+            MakeChoice(weather);
             names = new List<string>() { };
         }
 
         //methods
-        public bool MakeChoice(Weather weather, Recipe recipe) 
+        public bool MakeChoice(Weather weather) //recipe 
         {
             Random rnd = new Random();
 
-            if (weather.condition == "Sunny" || recipe.pricePerCup == 1)
+            if (weather.condition == "Sunny") // || recipe.pricePerCup == 1)
             {
                 int newInt = rnd.Next(4, 10);
                 if (newInt >= 5)
                     return true;
 
             }
-            else if (weather.condition == "Cloudy" || recipe.pricePerCup == 2)
+            else if (weather.condition == "Cloudy") // || recipe.pricePerCup == 2)
             {
                 int newInt = rnd.Next(3, 10);
                 if (newInt >= 5)
                     return true;
             }
-            else if (weather.condition == "Rainy" || recipe.pricePerCup ==3)
+            else if (weather.condition == "Rainy") //|| recipe.pricePerCup ==3)
             {
                 int newInt = rnd.Next(1, 10);
                 if (newInt >= 5)

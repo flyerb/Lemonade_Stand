@@ -12,7 +12,7 @@ namespace LemonadeStand_3DayStarter
 
         public Weather weather;
         public List<Customer> customers;
-        public List<string> daysOfWeek;
+        
 
 
         //ctor 
@@ -25,10 +25,6 @@ namespace LemonadeStand_3DayStarter
             //print the EOD
             //print running total for week
             
-
-
-
-            daysOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         }
 
         private void GenerateCustomers()

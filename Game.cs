@@ -9,19 +9,28 @@ namespace LemonadeStand_3DayStarter
     class Game
     {
         private Player player;
-        private List<Day> days;
+        public List<Day> days;
         private int currentDay;
         private Store store;
         public Day day;
         public Weather weather;
 
+        //ctor
+        public Game()
+        {
+            days = new List<Day>();
+            DaysOfTheWeek();
+            
+            
+        }
+
         //methods
-         
         public void RunGame()
         {
+            
             //printing weather forecast for tomorrow and today 
             Weather todaysWeather = new Weather();
-            todaysWeather.Forecast();
+            Forecast();
             
            
             
@@ -34,6 +43,23 @@ namespace LemonadeStand_3DayStarter
             
         }
 
+        public void DaysOfTheWeek()
+        {
+            for(int i= 0; i <7; i++)
+            {
+                days.Add(new Day());
+            }
+        }
+
+        // forecast method
+
+        public void Forecast()
+        {
+            foreach (Day day in days)
+            {
+                Console.WriteLine("The forecast for this day is" + day.weather.temperature + day.weather.condition);
+            }
+        }
 
         //buy ingredients 
         public void GoToTheStore(Player player)
