@@ -16,10 +16,10 @@ namespace LemonadeStand_3DayStarter
 
 
         //ctor 
-        public Day()
+        public Day(Random rnd)
         {
             customers = new List<Customer>();
-            weather = new Weather();
+            weather = new Weather(rnd);
             GenerateCustomers();
             Customer dailyCustomers = new Customer(); // this will take you to the MakeChoice() How to connect make choice with the generated customers?
             //print the EOD

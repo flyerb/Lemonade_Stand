@@ -12,11 +12,13 @@ namespace LemonadeStand_3DayStarter
         public string condition;
         public int temperature;
         private List<string> weatherConditions;
-        
+        private Random rnd;
+
 
         //ctor
-        public Weather()
+        public Weather(Random rnd)
         {
+            this.rnd = rnd;
             weatherConditions = new List<string>() { "Sunny", "Rainy", "Cloudy" };
             FindCondition();
             FindTemp();
@@ -27,7 +29,7 @@ namespace LemonadeStand_3DayStarter
 
         public void FindCondition()
         {
-            Random rnd = new Random();
+
             int index = rnd.Next(weatherConditions.Count);
             condition = weatherConditions[index];
             // Console.WriteLine(weatherConditions[index]);

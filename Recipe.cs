@@ -36,26 +36,23 @@ namespace LemonadeStand_3DayStarter
 
         }
 
-        public void Makepitcher()
+        public void SetRecipe()
         {
-            if (amountOfLemons > 4)
-            {
-                amountOfLemons -= 4;
-            }
-            else Console.WriteLine("We ran out of lemons!");
+            Console.WriteLine("How many lemons would you like to use?");
+            amountOfLemons = Convert.ToInt32(Console.ReadLine());
+            
 
-            if (amountOfSugarCubes > 6)
-            {
-                amountOfSugarCubes -= 6;
-            }
-            else Console.WriteLine("We ran out of sugar!");
+            Console.WriteLine("How many sugar cubes would you like to use?");
+            amountOfSugarCubes = Convert.ToInt32(Console.ReadLine());
+            
 
-            if (amountOfIceCubes > 3)
-            {
-                amountOfIceCubes -= 3;
-            }
-            else Console.WriteLine("We ran out of ice cubes");
+            Console.WriteLine("How much ice would you like to use?");
+            amountOfIceCubes = Convert.ToInt32(Console.ReadLine());
+            
 
+           Console.WriteLine("How much would you like to sell a cup for?");
+            pricePerCup = Convert.ToDouble(Console.ReadLine());
+         
         }
     }
 }

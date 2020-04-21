@@ -15,7 +15,7 @@ namespace LemonadeStand_3DayStarter
         //ctor
         public Customer()
         {
-            MakeChoice(weather);
+           // MakeChoice(weather);
             names = new List<string>() { };
         }
 
