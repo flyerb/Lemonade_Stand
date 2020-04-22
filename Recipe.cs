@@ -28,7 +28,7 @@ namespace LemonadeStand_3DayStarter
             if (pricePerCup <= 2)
             {
                 int newInt = rnd.Next(4, 10);
-                if (newInt >= 5)
+                if (newInt >= 5)  
                     return true;
             }
             else if (pricePerCup == 3)
@@ -52,16 +52,12 @@ namespace LemonadeStand_3DayStarter
         {
             Console.WriteLine("How many lemons would you like to use for a pitcher?");
             amountOfLemons = Convert.ToInt32(Console.ReadLine());
-            inventory.lemons.RemoveRange(0, amountOfLemons);
-            
-            
+
             Console.WriteLine("How many sugar cubes would you like to use for a pitcher?");
             amountOfSugarCubes = Convert.ToInt32(Console.ReadLine());
-            inventory.sugarCubes.RemoveRange(0, amountOfSugarCubes);
 
             Console.WriteLine("How much ice would you like to use for a pitcher?");
             amountOfIceCubes = Convert.ToInt32(Console.ReadLine());
-            inventory.iceCubes.RemoveRange(0, amountOfIceCubes);
 
             Console.WriteLine("How much would you like to sell a cup for?");
             pricePerCup = Convert.ToDouble(Console.ReadLine());

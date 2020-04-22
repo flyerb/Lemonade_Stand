@@ -10,39 +10,38 @@ namespace LemonadeStand_3DayStarter
     {
         //variables
         public int cupsLeftInPitcher;
-        Inventory inventory;
+      
 
         //ctor
         public Pitcher()
         {
-            Inventory inventory = new Inventory();
+            cupsLeftInPitcher = 0;
         }
 
         //methods
 
 
-        public void CurrentPitcher()
+        public void MakePitcher(Recipe recipe, Inventory inventory)
         {
-            do
+            if (recipe.amountOfLemons <= inventory.lemons.Count)
             {
-                cupsLeftInPitcher--;
-            }
-            while (cupsLeftInPitcher > 11);
-            
-                    //if (cupsLeftInPitcher > 0)
-            //{
+                inventory.lemons.RemoveRange(0, recipe.amountOfLemons);
 
-            //    for (int i = 0; i < 11; i++)
-            //    {
-            //        cupsLeftInPitcher = i;
-            //        Console.WriteLine("There are" + cupsLeftInPitcher + "cups left in this pitcher.");
-            //    }
-            //}
-            //else
-            //    MakeAPitcher();
-            
+            }
+            else if (recipe.amountOfSugarCubes <= inventory.sugarCubes.Count)
+            {
+                inventory.sugarCubes.RemoveRange(0, recipe.amountOfSugarCubes);
+
+            }
+            else if (recipe.amountOfIceCubes <= inventory.iceCubes.Count)
+            {
+                inventory.iceCubes.RemoveRange(0, recipe.amountOfIceCubes);
+
+            }
+            else
+                Console.WriteLine("You need to got to the store for supplies. ");
         }
-      
+        
     }
 
     
