@@ -26,13 +26,13 @@ namespace LemonadeStand_3DayStarter
             //print running total for week
             
         }
+       
 
         private void GenerateCustomers()
         {
             Random rnd = new Random();
             int amountOfCustomer = 0;
-            //TODO finish switch case
-            switch (weather.condition)
+              switch (weather.condition)
             {
                 case "Sunny":
                     amountOfCustomer = rnd.Next(50, 100);

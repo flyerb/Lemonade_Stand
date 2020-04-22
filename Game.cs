@@ -19,8 +19,10 @@ namespace LemonadeStand_3DayStarter
         //ctor
         public Game()
         {
+            player = new Player();
             rnd = new Random();
             days = new List<Day>();
+            store = new Store();
             DaysOfTheWeek();
             
             // player will also need to be here too 
@@ -29,21 +31,12 @@ namespace LemonadeStand_3DayStarter
         //methods
         public void RunGame()
         {
-            while (true)
+            while (true) /// this is an endless loop - dont do this. erase later
             {
                 Menu();
 
             }
-            //print weather forecast for tomorrow and today 
-            
-            
-            //print how many ingredients/ money you have
-            //asking if you want to go to the store
-            //GoToTheStore();
-            //Day test = new Day();
-            
-            
-            
+
         }
 
         public void Menu()
@@ -55,16 +48,16 @@ namespace LemonadeStand_3DayStarter
             {
                 case "1":
                     GoToTheStore();
-                    //
                     break;
                 case "2":
-                    //DisplayInventory();
+                    player.inventory.DisplayInventory();
                     break;
                 case "3":
                     player.recipe.SetRecipe();
                     break;
                 case "4":
                     //SimulateDay();
+                    
                     break;
                 case "5":
                     Forecast();
@@ -118,10 +111,11 @@ namespace LemonadeStand_3DayStarter
             else if (userInput == "Cups")
             {
                 store.SellCups(player);
+               
             }
             else if (userInput == "Leave Store")
             {
-
+                  
             }
             else
             {

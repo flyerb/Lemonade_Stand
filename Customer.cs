@@ -20,24 +20,24 @@ namespace LemonadeStand_3DayStarter
         }
 
         //methods
-        public bool MakeChoice(Weather weather) //recipe 
+        public bool MakeChoice(Weather weather)
         {
             Random rnd = new Random();
 
-            if (weather.condition == "Sunny") // || recipe.pricePerCup == 1)
+            if (weather.condition == "Sunny") 
             {
                 int newInt = rnd.Next(4, 10);
                 if (newInt >= 5)
                     return true;
 
             }
-            else if (weather.condition == "Cloudy") // || recipe.pricePerCup == 2)
+            else if (weather.condition == "Cloudy") 
             {
-                int newInt = rnd.Next(3, 10);
+                int newInt = rnd.Next(4, 10);
                 if (newInt >= 5)
                     return true;
             }
-            else if (weather.condition == "Rainy") //|| recipe.pricePerCup ==3)
+            else if (weather.condition == "Rainy") 
             {
                 int newInt = rnd.Next(1, 10);
                 if (newInt >= 5)

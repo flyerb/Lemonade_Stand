@@ -12,47 +12,60 @@ namespace LemonadeStand_3DayStarter
         public int amountOfSugarCubes;
         public int amountOfIceCubes;
         public double pricePerCup;
+        public Inventory inventory;
 
+        public Recipe()
+        {
+            Inventory inventory = new Inventory();
+        }
 
         //methods
 
-        public void CupPrice() //dont use numbers- come back to this
+        public bool ChoiceCupPrice()
         {
             Random rnd = new Random();
-            int dailyPrice = rnd.Next(1, 5);
 
-            if (dailyPrice <= 2)
+            if (pricePerCup <= 2)
             {
-                pricePerCup = 1; //tried to use ToString 
+                int newInt = rnd.Next(4, 10);
+                if (newInt >= 5)
+                    return true;
             }
-            else if (dailyPrice == 3)
+            else if (pricePerCup == 3)
             {
-                pricePerCup = 2;
+                int newInt = rnd.Next(4, 10);
+                if (newInt >= 5)
+                    return true;
             }
-            else if (dailyPrice >= 4)
+            else if (pricePerCup >= 4)
             {
-                pricePerCup = 3;
+                int newInt = rnd.Next(4, 10);
+                if (newInt >= 5)
+                    return true;
             }
+            return
+                false;
 
         }
 
         public void SetRecipe()
         {
-            Console.WriteLine("How many lemons would you like to use?");
+            Console.WriteLine("How many lemons would you like to use for a pitcher?");
             amountOfLemons = Convert.ToInt32(Console.ReadLine());
+            inventory.lemons.RemoveRange(0, amountOfLemons);
             
-
-            Console.WriteLine("How many sugar cubes would you like to use?");
+            
+            Console.WriteLine("How many sugar cubes would you like to use for a pitcher?");
             amountOfSugarCubes = Convert.ToInt32(Console.ReadLine());
-            
+            inventory.sugarCubes.RemoveRange(0, amountOfSugarCubes);
 
-            Console.WriteLine("How much ice would you like to use?");
+            Console.WriteLine("How much ice would you like to use for a pitcher?");
             amountOfIceCubes = Convert.ToInt32(Console.ReadLine());
-            
+            inventory.iceCubes.RemoveRange(0, amountOfIceCubes);
 
-           Console.WriteLine("How much would you like to sell a cup for?");
+            Console.WriteLine("How much would you like to sell a cup for?");
             pricePerCup = Convert.ToDouble(Console.ReadLine());
-         
+            
         }
     }
 }
