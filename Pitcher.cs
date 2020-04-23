@@ -28,18 +28,19 @@ namespace LemonadeStand_3DayStarter
                 inventory.lemons.RemoveRange(0, recipe.amountOfLemons);
 
             }
-            else if (recipe.amountOfSugarCubes <= inventory.sugarCubes.Count)
+            if (recipe.amountOfSugarCubes <= inventory.sugarCubes.Count)
             {
                 inventory.sugarCubes.RemoveRange(0, recipe.amountOfSugarCubes);
 
             }
-            else if (recipe.amountOfIceCubes <= inventory.iceCubes.Count)
+            if (recipe.amountOfIceCubes <= inventory.iceCubes.Count)
             {
                 inventory.iceCubes.RemoveRange(0, recipe.amountOfIceCubes);
+                cupsLeftInPitcher = 10;
 
             }
             else
-                Console.WriteLine("You need to got to the store for supplies. ");
+                Console.WriteLine("You need to got to the store for supplies.");
         }
         
     }

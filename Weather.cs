@@ -62,6 +62,4 @@ namespace LemonadeStand_3DayStarter
        
     }
 }
-        //give a forecast and the actual day
-        //loop through the days of of the week and assign a type of weather to each day.
-        //
+       

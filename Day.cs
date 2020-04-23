@@ -21,7 +21,7 @@ namespace LemonadeStand_3DayStarter
             customers = new List<Customer>();
             weather = new Weather(rnd);
             GenerateCustomers();
-            Customer dailyCustomers = new Customer(); // this will take you to the MakeChoice() How to connect make choice with the generated customers?
+            Customer dailyCustomers = new Customer(); 
             //print the EOD
             //print running total for week
             
@@ -52,6 +52,25 @@ namespace LemonadeStand_3DayStarter
                 customers.Add(new Customer());
             }
         }
-        
+        public void SimulateDay(Player player)
+        {
+            foreach(Customer customer in customers)
+            {
+                if(player.pitcher.cupsLeftInPitcher == 0)
+                {
+                    player.pitcher.MakePitcher(player.recipe, player.inventory);
+                }
+                //Insert a break here if no inventory is left
+                
+                
+                bool decsion = customer.MakeChoice(weather, player.recipe);
+                if( decsion == true)
+                {
+                    player.pitcher.cupsLeftInPitcher--;
+                    player.wallet.Money += player.recipe.pricePerCup;
+                }
+            }
+        }
+
     }
 }

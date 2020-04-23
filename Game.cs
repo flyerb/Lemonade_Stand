@@ -8,6 +8,8 @@ namespace LemonadeStand_3DayStarter
 {
     class Game
     {
+        //variables
+
         private Player player;
         public List<Day> days;
         private int currentDay;
@@ -25,21 +27,19 @@ namespace LemonadeStand_3DayStarter
             store = new Store();
             DaysOfTheWeek();
             
-            // player will also need to be here too 
+            
         }
 
         //methods
         public void RunGame()
         {
-            while (true) /// this is an endless loop - dont do this. erase later
+            foreach (Day day in days)
             {
-                Menu();
-
+                Menu(day);
             }
-
         }
 
-        public void Menu()
+        public void Menu(Day day)
         {
 
             Console.WriteLine("Please select what you would like to do.\n1) Go to Store\n2) Check Inventory\n3) Set Recipe\n4) Start Day\n5) Check Forecast\n 6) Exit Game");
@@ -56,8 +56,8 @@ namespace LemonadeStand_3DayStarter
                     player.recipe.SetRecipe();
                     break;
                 case "4":
-                    //SimulateDay();
-                    
+                    day.SimulateDay(player);
+                  
                     break;
                 case "5":
                     Forecast();
@@ -66,7 +66,7 @@ namespace LemonadeStand_3DayStarter
                     Environment.Exit(0);
                     break;
                 default:
-                    Menu();
+                    Menu(day);
                     break;
             }
         }
@@ -89,7 +89,7 @@ namespace LemonadeStand_3DayStarter
             }
         }
 
-        //buy ingredients 
+        
         public void GoToTheStore()
         {
             Console.WriteLine("What would you like to buy?\n Ice Cubes\n Lemons\n Sugar\n Cups\n Leave Store");

@@ -21,30 +21,25 @@ namespace LemonadeStand_3DayStarter
 
         //methods
 
-        public bool ChoiceCupPrice()
+        public string ChoiceCupPrice()
         {
             Random rnd = new Random();
 
             if (pricePerCup <= 2)
             {
-                int newInt = rnd.Next(4, 10);
-                if (newInt >= 5)  
-                    return true;
+                return "goodDeal";
             }
             else if (pricePerCup == 3)
             {
-                int newInt = rnd.Next(4, 10);
-                if (newInt >= 5)
-                    return true;
+
+                return "marketValue";
             }
-            else if (pricePerCup >= 4)
+            else
             {
-                int newInt = rnd.Next(4, 10);
-                if (newInt >= 5)
-                    return true;
+               
+                    return "tooHigh";
             }
-            return
-                false;
+            
 
         }
 
