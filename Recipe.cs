@@ -13,6 +13,7 @@ namespace LemonadeStand_3DayStarter
         public int amountOfIceCubes;
         public double pricePerCup;
         public Inventory inventory;
+        public string priceVariable;
 
         public Recipe()
         {
@@ -21,23 +22,22 @@ namespace LemonadeStand_3DayStarter
 
         //methods
 
-        public string ChoiceCupPrice()
+        public void CupPrice()
         {
-            Random rnd = new Random();
 
             if (pricePerCup <= 2)
             {
-                return "goodDeal";
+                priceVariable = "cheap";
             }
             else if (pricePerCup == 3)
             {
 
-                return "marketValue";
+                priceVariable = "marketValue";
             }
             else
             {
-               
-                    return "tooHigh";
+
+                priceVariable = "tooHigh";
             }
             
 

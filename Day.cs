@@ -12,16 +12,18 @@ namespace LemonadeStand_3DayStarter
 
         public Weather weather;
         public List<Customer> customers;
-        
+       
 
 
         //ctor 
         public Day(Random rnd)
         {
+            
             customers = new List<Customer>();
             weather = new Weather(rnd);
             GenerateCustomers();
-            Customer dailyCustomers = new Customer(); 
+            Customer dailyCustomers = new Customer();
+            
             //print the EOD
             //print running total for week
             
@@ -56,13 +58,27 @@ namespace LemonadeStand_3DayStarter
         {
             foreach(Customer customer in customers)
             {
-                if(player.pitcher.cupsLeftInPitcher == 0)
+                if (player.inventory.iceCubes.Count == 0)
+                {
+                    Console.WriteLine("You dont have enough ice cubes to make a pitcher");
+                    break;
+                }
+                if(player.inventory.lemons.Count == 0)
+                {
+                    Console.WriteLine("You dont have enough lemons to make a pitcher");
+                    break;
+                }
+                if(player.inventory.sugarCubes.Count == 0)
+                {
+                    Console.WriteLine("You dont have enough sugar cubes to make a pitcher");
+                    break;
+                }
+
+                if (player.pitcher.cupsLeftInPitcher == 0)
                 {
                     player.pitcher.MakePitcher(player.recipe, player.inventory);
                 }
-                //Insert a break here if no inventory is left
-                
-                
+
                 bool decsion = customer.MakeChoice(weather, player.recipe);
                 if( decsion == true)
                 {

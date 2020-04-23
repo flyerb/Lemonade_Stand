@@ -14,10 +14,13 @@ namespace LemonadeStand_3DayStarter
         private List<string> names;
         public Weather weather;
         public Recipe recipe;
+        Random rnd = new Random();
 
         //ctor
         public Customer()
         {
+           Weather weather = new Weather(rnd);
+            Recipe recipe = new Recipe();
            MakeChoice(weather, recipe);
            names = new List<string>() { };
         }
@@ -27,20 +30,20 @@ namespace LemonadeStand_3DayStarter
         {
             Random rnd = new Random();
 
-            if (weather.condition == "Sunny" || recipe.pricePerCup <= 1)
+            if (weather.condition == "Sunny" || recipe.priceVariable == "cheap")
             {
                 int newInt = rnd.Next(4, 10);
                 if (newInt >= 5)
                     return true;
 
             }
-            if (weather.condition == "Cloudy" || recipe.pricePerCup >= 2); 
+            if (weather.condition == "Cloudy" || recipe.priceVariable == "marketValue")
             {
                 int newInt = rnd.Next(4, 10);
                 if (newInt >= 5)
                     return true;
             }
-            if (weather.condition == "Rainy" || recipe.pricePerCup >= 5);
+            if (weather.condition == "Rainy" || recipe.priceVariable == "tooHigh")
             {
                 int newInt = rnd.Next(1, 10);
                 if (newInt >= 5)

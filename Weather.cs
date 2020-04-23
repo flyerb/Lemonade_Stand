@@ -11,7 +11,7 @@ namespace LemonadeStand_3DayStarter
         //variables
         public string condition;
         public int temperature;
-        private List<string> weatherConditions;
+        public List<string> weatherConditions;
         private Random rnd;
 
 
